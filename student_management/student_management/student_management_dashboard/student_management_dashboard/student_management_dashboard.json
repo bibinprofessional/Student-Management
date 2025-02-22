@@ -1,0 +1,31 @@
+{
+ "cards": [
+  {
+   "card": "Total Enrollments"
+  },
+  {
+   "card": "Enrollments Pending For Approval"
+  },
+  {
+   "card": "Approved Enrollments"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Student Enrollment Chart",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-02-22 20:33:09.169989",
+ "dashboard_name": "Student Management Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2025-02-22 20:49:43.871901",
+ "modified_by": "Administrator",
+ "module": "Student Management",
+ "name": "Student Management Dashboard",
+ "owner": "Administrator"
+}

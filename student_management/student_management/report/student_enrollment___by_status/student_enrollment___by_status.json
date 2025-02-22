@@ -1,0 +1,28 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-02-22 17:10:21.605926",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"status\",\"Student Enrollment\"],[\"_aggregate_column\",\"Student Enrollment\"]],\"order_by\":\"`tabStudent Enrollment`.`modified` desc\",\"page_length\":20,\"column_widths\":{\"status\":183,\"_aggregate_column\":138},\"group_by\":{\"group_by\":\"`tabStudent Enrollment`.`status`\",\"aggregate_function\":\"count\"}}",
+ "letterhead": null,
+ "modified": "2025-02-22 17:10:34.912950",
+ "modified_by": "Administrator",
+ "module": "Student Management",
+ "name": "Student Enrollment - by Status",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Student Enrollment",
+ "report_name": "Student Enrollment - by Status",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}
