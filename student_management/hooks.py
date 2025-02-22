@@ -65,6 +65,10 @@ fixtures = [
     {
         "dt": "Workflow",
         "filters": [["name", "in", ["Student Enrollment Status"]]]
+    },
+    {
+        "dt": "Courses",
+        "filters": [["name", "in", ["Mobile Development","Web Development"]]]
     }
 ]
 
