@@ -13,8 +13,8 @@
  "is_standard": 1,
  "message": "<h3>Hello User,</h3>\n\n<p>Student Enrollment - {{doc.name}} created by ({{doc.owner}}) has been Approved.</p>\n\n<p><a href='{{frappe.utils.get_url()}}/app/student-enrollment/{{doc.name}}'\">Open Student Enrollment</a><br></p>\n\n<p>Regards,<br>\nSupport Team</p>\n",
  "message_type": "Markdown",
- "modified": "2025-02-22 16:47:30.585165",
- "modified_by": "Administrator",
+ "modified": "2025-02-22 21:16:04.790448",
+ "modified_by": "bibinprofessional@gmail.com",
  "module": "Student Management",
  "name": "Student Enrollment Aproved",
  "owner": "Administrator",
@@ -25,8 +25,8 @@
  ],
  "send_system_notification": 0,
  "send_to_all_assignees": 0,
- "sender": "Enrollment Support",
- "sender_email": "frappetesting1@gmail.com",
+ "sender": "",
+ "sender_email": "",
  "subject": "Student Enrollment {{doc.name}} has been Approved",
  "value_changed": "status"
 }
