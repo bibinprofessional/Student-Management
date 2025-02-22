@@ -53,6 +53,21 @@ app_license = "mit"
 # include app icons in desk
 # app_include_icons = "student_management/public/icons.svg"
 
+fixtures = [
+    {
+        "dt": "Workflow State",
+        "filters": [["name", "in", ["Draft","Submitted"]]]
+    },
+    {
+        "dt": "Workflow Action Master",
+        "filters": [["name", "in", ["Submit"]]]
+    },
+    {
+        "dt": "Workflow",
+        "filters": [["name", "in", ["Student Enrollment Status"]]]
+    }
+]
+
 # Home Pages
 # ----------
 
