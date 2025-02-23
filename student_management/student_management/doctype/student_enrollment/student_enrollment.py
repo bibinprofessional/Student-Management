@@ -19,7 +19,7 @@ class StudentEnrollment(Document):
 
         # Validate that enrollment date is not in the future
         if self.enrollment_date:
-            enrollment_date = datetime.strptime(self.enrollment_date, "%Y-%m-%d")
+            enrollment_date = datetime.strptime(str(self.enrollment_date), "%Y-%m-%d")
             if enrollment_date > datetime.today():
                 frappe.throw("Enrollment date cannot be in the future.", ValidationError)
 
