@@ -9,20 +9,50 @@ mit
 
 ### Local Setup
 
-1. [Install Bench](https://github.com/frappe/bench).
-2. Install Frappe CRM app:
+1. [Install Bench Prerequisites](https://docs.frappe.io/framework/user/en/installation).
+2. Initialize Bench:
     ```sh
-    $ bench get-app crm
+    bench init <folder-name> --frappe-branch version-15 --python python3.11 
     ```
-3. Create a site with the crm app:
+    Replace <folder-name> with your folder name
+3. Move to Bench directory:
     ```sh
-    $ bench --site sitename.localhost install-app crm
+    cd <folder-name>
     ```
-4. Open the site in the browser:
+4. Clone ERPNext:
     ```sh
-    $ bench browse sitename.localhost --user Administrator
+    bench get-app erpnext --branch version-15
     ```
-5. Access the crm page at `sitename.localhost:8000/crm` in your web browser.
+5. Clone Student Management:
+    ```sh
+    bench get-app https://github.com/bibinprofessional/Student-Management.git --branch develop
+    ```
+6. Create New Site:
+    ```sh
+    bench new-site <site-name>
+    ```
+    Replace <site-name> with your site name
+7. Add Site to Hosts
+    ```sh
+    bench --site <site-name> add-to-hosts
+    ```
+8. Install ERPNext to site
+    ```sh
+    bench --site <site-name> install-app erpnext
+    ```
+7. Install Student Management to site
+    ```sh
+    bench --site <site-name> install-app student_management
+    ```
+8. Enable Scheduler
+    ```sh
+    bench --site <site-name> enable-scheduler
+    ```
+9. Start Bench
+    ```sh
+    bench start
+    ```
+    You can open your site at (http://<site-name>:<port-no>/)
 
 ## Key Features
 
