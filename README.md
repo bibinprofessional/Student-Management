@@ -68,7 +68,15 @@ If you prefer self-hosting, follow the official [Frappe Bench Installation](http
 
 ### Local Setup
 
-1. [Install Bench](https://github.com/frappe/bench).
+1. [Install Bench Prerequisites](https://docs.frappe.io/framework/user/en/installation).
+2. Initialize Bench:
+    ```sh
+    bench init <folder-name> --frappe-branch version-15 --python python3.11 
+    ```
+2. Install Frappe CRM app:
+    ```sh
+    $ bench get-app crm
+    ```
 2. Install Frappe CRM app:
     ```sh
     $ bench get-app crm
