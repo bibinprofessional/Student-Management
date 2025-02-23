@@ -64,16 +64,22 @@ mit
     ```
     You can open your site at (http://site-name:port-no/)
 
-## Key Features
 
--   **Views:** Create custom views which is a combination of filters, sort and columns.
-    -   **Pinned View:** Pin important leads and deals in the sidebar.
-    -   **Public View:** Share views with all users.
-    -   **Saved View:** Save views for later use.
--   **Email Communication:** Send and receive emails directly from the Lead/Deal Page.
--   **Email Templates:** Create and use email templates for faster communication.
--   **Comments:** Add comments to leads and deals to keep track of the conversation.
--   **Notifications:** Get notified when someone mentions you in a comment.
+## Key Things to follow
+
+-   **Create User:** Create a User With Valid email id and assign System Manager role and set password. Now login with that credentials. This is because email notifications will be sent to valid email id only.
+    
+-   **Add Email Account:** Add a Email Account and making it as default outgoing. Under Notification (Student Enrollment Aproved) add this email as sender
+-   **Add Courses:** As part of setup only 2 courses are added. You can add more courses in Courses Doctype
+
+
+## Key Things to know
+
+-   **Student Management Workspace:** Created a workspace called Student Management which can be seen in SideBar. This workspace has shortcuts to doctype and reports. Clicking on report will take to report page where you can click on show report to see the specific report
+-   **Test cases:** Unit Test cases are return to test validation logics. You can run these tests using the following command.
+        ```sh
+        bench --site <site-name> run-tests --doctype "Student Enrollment"
+        ```
 -   **Service Level Agreement:** Set SLA for leads and deals and get notified when the SLA is breached.
 -   **Assignment Rule:** Automatically assign leads and deals to users based on the criteria.
 -   **Tasks:** Create tasks for leads and deals.
