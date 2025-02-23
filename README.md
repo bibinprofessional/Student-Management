@@ -7,6 +7,8 @@ This is Custom Module for Student Enrollment Management build using frappe.
 mit
 
 
+## Getting Started
+
 ### Local Setup
 
 1. [Install Bench Prerequisites](https://docs.frappe.io/framework/user/en/installation).
@@ -76,75 +78,20 @@ mit
 ## Key Things to know
 
 -   **Student Management Workspace:** Created a workspace called Student Management which can be seen in SideBar. This workspace has shortcuts to doctype and reports. Clicking on report will take to report page where you can click on show report to see the specific report
+
 -   **Test cases:** Unit Test cases are return to test validation logics. You can run these tests using the following command.
-        ```sh
+        ```
         bench --site <site-name> run-tests --doctype "Student Enrollment"
         ```
--   **Service Level Agreement:** Set SLA for leads and deals and get notified when the SLA is breached.
--   **Assignment Rule:** Automatically assign leads and deals to users based on the criteria.
--   **Tasks:** Create tasks for leads and deals.
--   **Notes:** Add notes to leads and deals.
--   **Call Logs:** See the call logs with call details and recordings.
+        Replace site-name with your site name
 
-## Integrations
+-   **Rest Api Integration:** Two apis are written with authentication. Only authorized user can access these apis. Authorization should be passed in header (token api_key:api_secret).
 
--   **Twilio:** Integrate Twilio to make and receive calls from the CRM. You can also record calls. It is a built-in integration.
--   **WhatsApp:** Integrate WhatsApp to send and receive messages from the CRM. [Frappe WhatsApp](https://github.com/shridarpatil/frappe_whatsapp) is used for this integration.
-
-## Getting Started
-
-### Cloud Hosting
-
-Get started with your personal or business site with a few clicks on [Frappe Cloud](https://frappecloud.com/marketplace/apps/crm).
-
-### Self-hosting
-
-If you prefer self-hosting, follow the official [Frappe Bench Installation](https://github.com/frappe/bench#installation) instructions.
-
-## Want to Just Try Out or Contribute?
-
-### Codespaces
-
-1. Open [this link](https://github.com/codespaces/new?hide_repo_select=true&ref=master&repo=668199241&skip_quickstart=true&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&geo=SoutheastAsia) and click on "Create Codespace".
-2. Wait for initialization (~15 mins).
-3. Run `bench start` from the terminal tab.
-4. Click on the link beside "8000" port under "Ports" tab.
-5. Log in with "Administrator" as the username and "admin" as the password.
-6. Go to `<random-id>.github.dev/crm` to access the crm interface.
-
-### Local Setup
-
-1. [Install Bench Prerequisites](https://docs.frappe.io/framework/user/en/installation).
-2. Initialize Bench:
-    ```sh
-    bench init <folder-name> --frappe-branch version-15 --python python3.11 
+    -   **create_student_enrollment:** This is a get api with 4 mandatory params(student_name,enrollment_date,course,email). This return the name of the created student enrollment record. This can be accessed at 
     ```
-2. Install Frappe CRM app:
-    ```sh
-    $ bench get-app crm
+    http://site-name:port-no/api/method/student_management.api.create_student_enrollment
     ```
-2. Install Frappe CRM app:
-    ```sh
-    $ bench get-app crm
+    -   **get_student_enrollments:** This is a get api with 2 optional params(status,course). This return the list of records based on filter. If no params are given it returns all created records.. This can be accessed at 
     ```
-3. Create a site with the crm app:
-    ```sh
-    $ bench --site sitename.localhost install-app crm
+    http://site-name:port-no/api/method/student_management.api.get_student_enrollments
     ```
-4. Open the site in the browser:
-    ```sh
-    $ bench browse sitename.localhost --user Administrator
-    ```
-5. Access the crm page at `sitename.localhost:8000/crm` in your web browser.
-
-## Need help?
-
-Join our [telegram group](https://t.me/frappecrm) for instant help.
-
-## Documentation
-
-Check out the [official documentation](https://docs.frappe.io/crm) for more details.
-
-## License
-
-[GNU Affero General Public License v3.0](LICENSE)
