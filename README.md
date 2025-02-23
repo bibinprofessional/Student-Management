@@ -69,17 +69,19 @@ mit
 
 ## Key Things to follow
 
--   **Create User:** Create a User With Valid email id and assign System Manager role and set password. Now login with that credentials. This is because email notifications will be sent to valid email id only.
+-   **Create User:** Create a User With Valid email id and assign System Manager role and set password. Now login with that credentials. This is because email notifications will be sent only to valid email id.
     
--   **Add Email Account:** Add a Email Account and making it as default outgoing. Under Notification (Student Enrollment Aproved) add this email as sender
+-   **Add Email Account:** Add a Email Account and make it as default outgoing. Open Notification list(Student Enrollment Aproved) add this email as sender
 -   **Add Courses:** As part of setup only 2 courses are added. You can add more courses in Courses Doctype
 
 
 ## Key Things to know
 
--   **Student Management Workspace:** Created a workspace called Student Management which can be seen in SideBar. This workspace has shortcuts to doctype and reports. Clicking on report will take to report page where you can click on show report to see the specific report
+-   **Student Management Workspace:** Created a workspace called Student Management which can be seen in SideBar. This workspace has shortcuts to doctype, dashboards and reports. Clicking on report will take to report page where you can click on show report to see the specific report.
 
--   **Test cases:** Unit Test cases are return to test validation logics. You can run these tests using the following command.
+-   **Added as Fixtures:** Needed worflows, notification, dashboard are added as fixtures. So you can continue without creating new.
+
+-   **Test cases:** Unit Test cases are written to test validation logics. You can run these tests using the following command.
         ```
         bench --site <site-name> run-tests --doctype "Student Enrollment"
         ```
@@ -87,11 +89,11 @@ mit
 
 -   **Rest Api Integration:** Two apis are written with authentication. Only authorized user can access these apis. Authorization should be passed in header (token api_key:api_secret).
 
-    -   **create_student_enrollment:** This is a get api with 4 mandatory params(student_name,enrollment_date,course,email). This return the name of the created student enrollment record. This can be accessed at 
+    -   **create_student_enrollment:** This is a get api with 4 mandatory params (student_name, enrollment_date, course, email). This returns the name of the created student enrollment record. This Api can be accessed at 
     ```
     http://site-name:port-no/api/method/student_management.api.create_student_enrollment
     ```
-    -   **get_student_enrollments:** This is a get api with 2 optional params(status,course). This return the list of records based on filter. If no params are given it returns all created records.. This can be accessed at 
+    -   **get_student_enrollments:** This is a get api with 2 optional params(status,course). This returns the list of records based on filter. If no params are given it returns all created records. This Api can be accessed at 
     ```
     http://site-name:port-no/api/method/student_management.api.get_student_enrollments
     ```
