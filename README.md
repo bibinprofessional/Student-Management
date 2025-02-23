@@ -71,7 +71,8 @@ mit
 
 -   **Create User:** Create a User With Valid email id and assign System Manager role and set password. Now login with that credentials. This is because email notifications will be sent only to valid email id.
     
--   **Add Email Account:** Add a Email Account and make it as default outgoing. Open Notification list(Student Enrollment Aproved) add this email as sender
+-   **Add Email Account:** Add a Email Account and make it as default outgoing. This will be used for sending notification.
+
 -   **Add Courses:** As part of setup only 2 courses are added. You can add more courses in Courses Doctype
 
 
