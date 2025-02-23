@@ -10,49 +10,59 @@ mit
 ### Local Setup
 
 1. [Install Bench Prerequisites](https://docs.frappe.io/framework/user/en/installation).
+
 2. Initialize Bench:
     ```sh
     bench init <folder-name> --frappe-branch version-15 --python python3.11 
     ```
-    Replace <folder-name> with your folder name
+    Replace folder-name with your folder name
+
 3. Move to Bench directory:
     ```sh
     cd <folder-name>
     ```
+
 4. Clone ERPNext:
     ```sh
     bench get-app erpnext --branch version-15
     ```
+
 5. Clone Student Management:
     ```sh
     bench get-app https://github.com/bibinprofessional/Student-Management.git --branch develop
     ```
+
 6. Create New Site:
     ```sh
     bench new-site <site-name>
     ```
-    Replace <site-name> with your site name
+    Replace site-name with your site name
+
 7. Add Site to Hosts
     ```sh
     bench --site <site-name> add-to-hosts
     ```
+
 8. Install ERPNext to site
     ```sh
     bench --site <site-name> install-app erpnext
     ```
+
 7. Install Student Management to site
     ```sh
     bench --site <site-name> install-app student_management
     ```
+
 8. Enable Scheduler
     ```sh
     bench --site <site-name> enable-scheduler
     ```
+
 9. Start Bench
     ```sh
     bench start
     ```
-    You can open your site at (http://<site-name>:<port-no>/)
+    You can open your site at (http://site-name:port-no/)
 
 ## Key Features
 
